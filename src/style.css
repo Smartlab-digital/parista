@@ -28,3 +28,18 @@ footer{background:#142d50;color:#c1d2e7;padding:43px 0}.footer-grid{display:grid
 .product-picture{isolation:isolate}
 .products{background:#f3f6fa}.product-card{border:1px solid #dfe6ef;background:#fff;box-shadow:0 10px 28px rgba(39,66,101,.035)}.product-picture{background:#f4f5f7;isolation:auto}.product-photo{mix-blend-mode:multiply;filter:grayscale(1) contrast(.88) brightness(.98) drop-shadow(0 14px 14px rgba(39,60,85,.13))}
 .product-photo{filter:grayscale(1) drop-shadow(0 14px 14px rgba(39,60,85,.13))}
+
+/* Объёмные миниатюры климатической техники для сервисной панели. */
+.header-services b.service-icon{position:relative;display:block;flex:0 0 49px;overflow:visible;background:transparent;color:transparent;isolation:isolate}
+.header-services b.service-icon::before,.header-services b.service-icon::after,.header-services b.service-icon span{content:'';position:absolute;display:block}
+.header-services b.service-icon::before{z-index:2;left:3px;top:9px;width:42px;height:27px;border-radius:9px 10px 12px 12px;background:linear-gradient(145deg,#ffffff 0%,#e6f0f7 50%,#b2c9dc 100%);box-shadow:inset 2px 2px 2px rgba(255,255,255,.9),inset -3px -4px 5px rgba(78,113,140,.22),0 7px 9px rgba(49,88,122,.23);transform:perspective(100px) rotateY(-12deg) rotateX(4deg)}
+.header-services b.service-icon::after{z-index:3;left:7px;top:27px;width:35px;height:8px;border-radius:0 0 12px 12px;background:linear-gradient(180deg,#668297,#203c55 55%,#55c7fa 57%,#caefff);box-shadow:0 5px 7px rgba(48,102,137,.2);transform:perspective(90px) rotateX(-18deg)}
+.header-services b.service-icon span{z-index:4;left:11px;top:15px;width:7px;height:7px;border-radius:50%;background:#42a9ec;box-shadow:0 0 0 2px rgba(255,255,255,.7),15px 3px 0 -2px #9eb6c8}
+.header-services b.service-icon--calculate{transform:rotate(-3deg)}
+.header-services b.service-icon--calculate::before{left:7px;top:7px;width:35px;height:31px;border-radius:8px;background:linear-gradient(145deg,#ffffff,#ddecf5 62%,#a6bed4);transform:perspective(100px) rotateY(-13deg) rotateX(5deg)}
+.header-services b.service-icon--calculate::after{left:12px;top:14px;width:24px;height:15px;border-radius:3px;background:repeating-linear-gradient(90deg,#4caee8 0 3px,transparent 3px 6px),linear-gradient(#1f557b,#71c9f3);box-shadow:0 4px 4px rgba(45,90,128,.2);transform:perspective(85px) rotateX(-10deg)}
+.header-services b.service-icon--calculate span{left:16px;top:10px;width:5px;height:5px;background:#fff;box-shadow:8px 4px 0 -1px #fff}
+.header-services b.service-icon--service::before{left:5px;top:6px;width:38px;height:34px;border-radius:10px;background:linear-gradient(145deg,#fdfefe,#cbdbe7 65%,#91a9be);transform:perspective(100px) rotateY(-10deg) rotateX(4deg)}
+.header-services b.service-icon--service::after{left:13px;top:13px;width:20px;height:20px;border-radius:50%;background:repeating-conic-gradient(#466b88 0 16deg,#d7e8f3 16deg 36deg);box-shadow:inset 0 0 0 4px #eff7fb,0 4px 5px rgba(50,83,111,.2);transform:none}
+.header-services b.service-icon--service span{left:35px;top:7px;width:8px;height:8px;background:#4bb4ec;box-shadow:0 0 0 2px rgba(255,255,255,.8)}
+@media(max-width:650px){.header-services b.service-icon{flex-basis:34px;transform:scale(.72);transform-origin:center left;margin-right:-8px}.header-services b.service-icon--calculate{transform:scale(.72) rotate(-3deg)}}
